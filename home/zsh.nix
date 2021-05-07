@@ -20,6 +20,15 @@
       # Fish shell like syntax highlighting for Zsh
       source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+      # Filter history completion with what you typed
+      autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+      zle -N up-line-or-beginning-search
+      zle -N down-line-or-beginning-search
+      bindkey '^[[A'  up-line-or-beginning-search    # Arrow up
+      bindkey '^[OA'  up-line-or-beginning-search
+      bindkey '^[[B'  down-line-or-beginning-search  # Arrow down
+      bindkey '^[OB'  down-line-or-beginning-search
+
       # direnv hook
       eval "$(direnv hook zsh)"
     '';
