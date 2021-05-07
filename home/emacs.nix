@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  programs.zsh.envExtra = ''
+    export PATH="$HOME/.config/emacs/bin:$PATH"
+  '';
+
   home.packages = with pkgs; [
     # doom emacs required dependencies
     git
