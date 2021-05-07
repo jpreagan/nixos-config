@@ -7,6 +7,7 @@
     autocd = true;
     defaultKeymap = "viins";
     dirHashes = {
+      d = "$HOME/.config/doom";
       n = "$HOME/.config/nix-config";
       s = "$HOME/.local/src";
       w = "$HOME/.local/www";
