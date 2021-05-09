@@ -27,6 +27,7 @@
     foliate
     gimp
     htop
+    imagemagick
     inkscape
     libreoffice
     neofetch
