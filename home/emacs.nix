@@ -23,6 +23,7 @@
     # :tools editorconfig
     editorconfig-core-c # per-project style config
     # :lang javascript
+    nodejs_latest
     nodePackages.javascript-typescript-langserver
     # :lang json
     jq
