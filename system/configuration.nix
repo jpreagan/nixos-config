@@ -75,6 +75,8 @@
   # Make available some additional fonts.
   fonts.fonts = with pkgs; [
     corefonts
+    emacs-all-the-icons-fonts
+    inter-ui
     overpass
     ubuntu_font_family
   ];
