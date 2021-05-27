@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.overlays = [
+    (import (builtins.fetchTarball {
+      url = https://github.com/nix-community/emacs-overlay/archive/master.tar.gz;
+    }))
+  ];
+
   programs.zsh.envExtra = ''
     export PATH="$HOME/.config/emacs/bin:$PATH"
   '';
@@ -8,7 +14,8 @@
   home.packages = with pkgs; [
     # doom emacs required dependencies
     git
-    emacs
+    binutils # native-comp needs 'as', provided by this
+    emacsPgtkGcc
     # doom emacs optional dependencies
     ripgrep
     coreutils
