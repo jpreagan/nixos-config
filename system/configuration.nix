@@ -23,6 +23,9 @@
     preLVM = true;
   };
 
+  # Enable fwupd, a DBus service that allows applications to update firmware.
+  services.fwupd.enable = true;
+
   networking.hostName = "nixos"; # Define your hostname.
 
   # Set your time zone.
