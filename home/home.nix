@@ -36,6 +36,7 @@
     tree
     unzip
     wget
+    youtube-dl
     zip
     zoom-us
   ];
