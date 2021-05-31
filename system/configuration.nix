@@ -38,6 +38,12 @@
   networking.interfaces.enp0s31f6.useDHCP = true;
   networking.interfaces.wlp2s0.useDHCP = true;
 
+  # A range of TCP ports on which incoming connections are accepted.
+  networking.firewall.allowedTCPPortRanges = [{
+    from = 8000;
+    to = 8080;
+  }];
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
