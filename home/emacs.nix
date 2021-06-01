@@ -41,6 +41,7 @@
     # :lang sh
     shellcheck
     # :lang web
+    html-tidy
     nodePackages.js-beautify
     nodePackages.stylelint
   ];
