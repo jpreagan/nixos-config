@@ -14,6 +14,7 @@
     ./vim.nix
     ./emacs.nix
     ./git.nix
+    ./node.nix
     ./irssi.nix
     ./gnome.nix
     ./firefox.nix
