@@ -39,7 +39,7 @@
   networking.interfaces.wlp2s0.useDHCP = true;
 
   # A range of TCP ports on which incoming connections are accepted.
-  networking.firewall.allowedTCPPorts = [ 3000 8000 8008 8080 ];
+  networking.firewall.allowedTCPPorts = [ 3000 3306 8000 8008 8080 ];
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
