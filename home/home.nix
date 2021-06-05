@@ -24,6 +24,7 @@
     curl
     dig
     feh
+    file
     foliate
     gimp
     htop
