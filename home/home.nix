@@ -15,6 +15,7 @@
     ./emacs.nix
     ./git.nix
     ./node.nix
+    ./php.nix
     ./irssi.nix
     ./gnome.nix
     ./firefox.nix
