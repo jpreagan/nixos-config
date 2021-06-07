@@ -19,6 +19,7 @@
       prompt pure
       prompt_newline='%666v'
       PROMPT=" $PROMPT"
+      PURE_PROMPT_SYMBOL='▶'
 
       # Fish shell like syntax highlighting for Zsh
       source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
