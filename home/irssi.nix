@@ -7,7 +7,7 @@
       freenode = {
         nick = "user";
         server = {
-          address = "chat.freenode.net";
+          address = "irc.libera.chat";
           port = 6697;
           autoConnect = true;
           ssl = {
