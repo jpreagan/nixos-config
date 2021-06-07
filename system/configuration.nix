@@ -68,6 +68,7 @@
     isNormalUser = true;
     description = "James";
     extraGroups = [ "wheel" "networkmanager" ];
+    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE2iPYjdcEXPki0VwcWHZfwcRKCY/vNqhK0z9W83oVsT" ];
     shell = pkgs.zsh;
   };
   programs.zsh = {
@@ -97,7 +98,10 @@
   ];
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    passwordAuthentication = false;
+  };
 
   system.stateVersion = "21.05";
 }
