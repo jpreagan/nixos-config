@@ -100,6 +100,7 @@
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
+    challengeResponseAuthentication = false;
     passwordAuthentication = false;
   };
 
