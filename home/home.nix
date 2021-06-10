@@ -39,6 +39,7 @@
     tree
     unzip
     wget
+    whois
     youtube-dl
     zip
     zoom-us
