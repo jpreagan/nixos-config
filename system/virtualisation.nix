@@ -6,6 +6,7 @@
   environment.systemPackages = with pkgs; [
     docker-compose
   ];
+  users.users.james.extraGroups = [ "docker" ];
 
   # Enable VirtualBox.
   virtualisation.virtualbox.host = {
