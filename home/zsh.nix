@@ -1,50 +1,39 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
-    autocd = true;
-    defaultKeymap = "viins";
-    dirHashes = {
-      d = "$HOME/.config/doom";
-      n = "$HOME/.config/nix-config";
-      s = "$HOME/.local/src";
-      w = "$HOME/.local/www";
+    dotDir = ".config/zsh";
+    history.path = "$ZDOTDIR/.zsh_history";
+    prezto = {
+      enable = true;
+      editor.keymap = "vi";
+      pmodules = [
+        "environment"
+        "terminal"
+        "editor"
+        "history"
+        "directory"
+        "spectrum"
+        "utility"
+        "completion"
+        "syntax-highlighting"
+        "history-substring-search"
+        "autosuggestions"
+        "prompt"
+      ];
+      prompt.theme = "pure";
     };
     initExtra = ''
-      # Pure prompt
-      fpath+=${pkgs.pure-prompt}/share/zsh/site-functions
-      autoload -U promptinit; promptinit
-      prompt pure
-      prompt_newline='%666v'
-      PROMPT=" $PROMPT"
       PURE_PROMPT_SYMBOL='▶'
-
-      # Fish shell like syntax highlighting for Zsh
-      source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-      # Filter history completion with what you typed
-      autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
-      zle -N up-line-or-beginning-search
-      zle -N down-line-or-beginning-search
-      bindkey '^[[A'  up-line-or-beginning-search    # Arrow up
-      bindkey '^[OA'  up-line-or-beginning-search
-      bindkey '^[[B'  down-line-or-beginning-search  # Arrow down
-      bindkey '^[OB'  down-line-or-beginning-search
-
-      # direnv hook
-      eval "$(direnv hook zsh)"
+      PURE_PROMPT_VICMD_SYMBOL='◀'
     '';
-    shellAliases = {
-      ll = "ls -l";
-      la = "ls -a";
-      ls = "ls --color=auto";
-      vi = "vim";
-    };
+    profileExtra = ''
+      path=($HOME/bin
+            $HOME/.local/bin
+            $HOME/.cargo/bin
+            $path)
+    '';
   };
-
-  home.packages = with pkgs; [
-    direnv
-  ];
 }
+

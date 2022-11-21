@@ -1,108 +1,46 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./intel.nix
-      ./laptop.nix
-      ./hidpi.nix
-      ./gnome.nix
-      ./virtualisation.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ./networking.nix
+    ./users.nix
+    ./xserver.nix
+    ./chromium.nix
+    ./fonts.nix
+    ./packages.nix
+  ];
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
-  # Use the systemd-boot EFI boot loader.
+  hardware.enableAllFirmware = true;
+  powerManagement.powertop.enable = true;
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # The encrypted disk that should be opened before the root filesystem is mounted.
   boot.initrd.luks.devices.luksroot = {
-    device = "/dev/disk/by-uuid/501debac-c777-404c-9b7f-27adcd6afe2f";
+    device = "/dev/disk/by-uuid/544dd1f3-aeb8-45d8-86f1-9de7fa8ac9d6";
     preLVM = true;
   };
 
-  # Enable fwupd, a DBus service that allows applications to update firmware.
   services.fwupd.enable = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
-
-  # Set your time zone.
   time.timeZone = "Pacific/Honolulu";
 
-  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
-  # Per-interface useDHCP will be mandatory in the future, so this generated config
-  # replicates the default behaviour.
-  networking.useDHCP = false;
-  networking.interfaces.enp0s31f6.useDHCP = true;
-  networking.interfaces.wlp2s0.useDHCP = true;
-
-  # A range of TCP ports on which incoming connections are accepted.
-  networking.firewall.allowedTCPPorts = [ 3000 3306 8000 8008 8080 ];
-
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
-    keyMap = "us";
+    font = "ter-v32n";
+    earlySetup = true;
+    useXkbConfig = true;
+    packages = [ pkgs.terminus_font ];
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.layout = "us";
-
-  # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.james = {
-    isNormalUser = true;
-    description = "James";
-    extraGroups = [ "wheel" "networkmanager" ];
-    openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE2iPYjdcEXPki0VwcWHZfwcRKCY/vNqhK0z9W83oVsT" ];
-    shell = pkgs.zsh;
-  };
-  programs.zsh = {
-    enable = true;
-    promptInit = ''
-      autoload -U promptinit && promptinit && prompt off && setopt prompt_sp
-    '';
-  };
-  programs.vim.defaultEditor = true;
-
-  # Make available some additional fonts.
-  fonts.fonts = with pkgs; [
-    corefonts
-    emacs-all-the-icons-fonts
-    inter-ui
-    overpass
-    ubuntu_font_family
-  ];
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    curl
-    git
-    vim
-    wget
-  ];
-
-  # Enable the OpenSSH daemon.
-  services.openssh = {
-    enable = true;
-    challengeResponseAuthentication = false;
-    passwordAuthentication = false;
-  };
-
-  system.stateVersion = "21.05";
+  system.stateVersion = "22.05";
 }

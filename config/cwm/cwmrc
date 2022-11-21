@@ -1,0 +1,15 @@
+# Set default Xft(3) font
+fontname "sans-serif:pixelsize=28:bold"
+
+gap 68 20 20 20
+
+color activeborder "#c0caf5"
+color inactiveborder "#a9b1d6"
+
+ignore lemonbar 
+
+# Key bindings
+bind-key CM-Return  kitty
+bind-key CM-w       chromium
+bind-key C4-Left    window-snap-left
+bind-key C4-Right   window-snap-right

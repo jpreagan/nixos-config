@@ -1,9 +1,10 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   programs.git = {
     enable = true;
-    userName = "James Reagan";
     userEmail = "james@jpreagan.com";
+    userName = "James Reagan";
+    extraConfig = { init.defaultBranch = "main"; };
   };
 }

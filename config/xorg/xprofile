@@ -1,0 +1,3 @@
+xsetroot -solid '#1a1b26'
+
+~/.config/lemonbar/bar.sh | lemonbar -pf 'JetBrains Mono:regular:size=24' -B '#c0caf5' -F '#1a1b26' &
