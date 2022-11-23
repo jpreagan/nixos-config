@@ -12,6 +12,6 @@
     ];
   };
 
-  environment.systemPackages = with pkgs; [ ungoogled-chromium ];
+  environment.systemPackages = with pkgs; [ chromium ungoogled-chromium ];
 }
 
