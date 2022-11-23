@@ -11,6 +11,7 @@
     ];
     shell = pkgs.zsh;
   };
+  security.sudo.wheelNeedsPassword = false;
   programs.zsh = { enable = true; };
   programs.vim.defaultEditor = true;
 }
