@@ -6,6 +6,7 @@
     ./networking.nix
     ./users.nix
     ./xserver.nix
+    ./virtualisation.nix
     ./chromium.nix
     ./fonts.nix
     ./packages.nix
