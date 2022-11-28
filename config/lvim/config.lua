@@ -2,6 +2,7 @@
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 lvim.colorscheme = "tokyonight-night"
+vim.opt.relativenumber = true -- set relative numbered lines
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
