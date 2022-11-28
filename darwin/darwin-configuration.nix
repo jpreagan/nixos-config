@@ -24,6 +24,10 @@
 
   homebrew = {
     enable = true;
+    onActivation = {
+      autoUpdate = true;
+      cleanup = "zap";
+    };
     taps = [ "homebrew/cask" ];
     casks = [ "rectangle" ];
   };
