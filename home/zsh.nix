@@ -32,6 +32,7 @@
       path=($HOME/bin
             $HOME/.local/bin
             $HOME/.cargo/bin
+            /opt/local/bin
             $path)
     '';
   };
