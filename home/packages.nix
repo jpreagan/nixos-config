@@ -13,6 +13,7 @@
     pwgen
     tldr
     tree
+    nodePackages.vercel
     ripgrep
 
     # C/C++
