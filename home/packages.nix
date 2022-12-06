@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  programs.go.enable = true;
+
   home.packages = with pkgs; [
     awscli2
     azure-cli
