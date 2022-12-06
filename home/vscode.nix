@@ -8,6 +8,7 @@
         dbaeumer.vscode-eslint
         esbenp.prettier-vscode
         github.github-vscode-theme
+        golang.go
         ms-azuretools.vscode-docker
         prisma.prisma
         vscodevim.vim
