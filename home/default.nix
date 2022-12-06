@@ -1,10 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./zsh.nix ./kitty.nix ./git.nix ./nvim.nix ./packages.nix ];
+  imports =
+    [ ./zsh.nix ./kitty.nix ./git.nix ./nvim.nix ./vscode.nix ./packages.nix ];
 
   home.username = "james";
-  home.homeDirectory = "/home/james";
+  home.homeDirectory = "/Users/james";
 
   home.stateVersion = "22.11";
 
