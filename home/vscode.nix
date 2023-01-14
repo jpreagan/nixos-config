@@ -5,11 +5,14 @@
     enable = true;
     extensions = with pkgs.vscode-extensions;
       [
+        bradlc.vscode-tailwindcss
         dbaeumer.vscode-eslint
+        denoland.vscode-deno
         esbenp.prettier-vscode
         github.copilot
         github.github-vscode-theme
         golang.go
+        graphql.vscode-graphql
         ms-azuretools.vscode-docker
         prisma.prisma
         vscodevim.vim
