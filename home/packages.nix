@@ -35,6 +35,9 @@
     nodePackages.yarn
     nodePackages.pnpm
 
+    # Deno
+    deno
+
     # PHP
     php82
     php82Packages.composer
