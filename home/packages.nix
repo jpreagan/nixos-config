@@ -10,7 +10,9 @@
     gh
     google-cloud-sdk
     htop
+    mkcert
     neofetch
+    nss
     pscale
     pwgen
     tldr
@@ -32,6 +34,10 @@
     nodejs
     nodePackages.yarn
     nodePackages.pnpm
+
+    # PHP
+    php82
+    php82Packages.composer
 
     # Python
     python39
