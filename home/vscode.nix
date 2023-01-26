@@ -29,6 +29,18 @@
           version = "5.1.0";
           sha256 = "08b3jrwm3rrwkkq8ybiak6r9d7hp4whjnpdji72jy0344xid1nqa";
         }
+        {
+          name = "vitest-explorer";
+          publisher = "zixuanchen";
+          version = "0.2.37";
+          sha256 = "1ZqNSFi9hS4rjYJrjMBerrV57zI231Vd5qDw2bzyVjU=";
+        }
+        {
+          name = "copilot-labs";
+          publisher = "github";
+          version = "0.7.632";
+          sha256 = "1sMC0xPWseIRXXVsMrisN3A4br36S9pp9hYzsSjanKM=";
+        }
       ];
   };
 }

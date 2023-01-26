@@ -6,7 +6,9 @@
   home.packages = with pkgs; [
     awscli2
     azure-cli
+    colordiff
     fd
+    flyctl
     gh
     google-cloud-sdk
     htop
