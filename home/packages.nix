@@ -7,6 +7,7 @@
     awscli2
     azure-cli
     colordiff
+    exiftool
     fd
     flyctl
     gh
@@ -15,6 +16,7 @@
     mkcert
     neofetch
     nss
+    pandoc
     pscale
     pwgen
     tldr
