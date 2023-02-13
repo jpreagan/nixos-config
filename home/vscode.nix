@@ -5,6 +5,7 @@
     enable = true;
     extensions = with pkgs.vscode-extensions;
       [
+        astro-build.astro-vscode
         bradlc.vscode-tailwindcss
         dbaeumer.vscode-eslint
         denoland.vscode-deno
@@ -42,5 +43,13 @@
           sha256 = "1sMC0xPWseIRXXVsMrisN3A4br36S9pp9hYzsSjanKM=";
         }
       ];
+    userSettings = {
+      "editor.fontFamily" = "'JetBrains Mono', monospace";
+      "workbench.colorTheme" = "Tokyo Night";
+      "window.zoomLevel" = 1;
+      "prettier.documentSelectors" = ["**/*.astro"];
+      "[astro]" = { "editor.defaultFormatter" = "astro-build.astro-vscode"; };
+      "editor.inlineSuggest.enabled" = true;
+    };
   };
 }
