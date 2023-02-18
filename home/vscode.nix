@@ -42,6 +42,12 @@
           version = "0.7.632";
           sha256 = "1sMC0xPWseIRXXVsMrisN3A4br36S9pp9hYzsSjanKM=";
         }
+        {
+          name = "vscode-mdx";
+          publisher = "unifiedjs";
+          version = "1.2.2";
+          sha256 = "EYjyjnwWrdr95CTwgbBmooJB/Tu8QUHDUyIDS72xNa0=";
+        }
       ];
     userSettings = {
       "editor.fontFamily" = "'JetBrains Mono', monospace";
@@ -50,6 +56,8 @@
       "prettier.documentSelectors" = ["**/*.astro"];
       "[astro]" = { "editor.defaultFormatter" = "astro-build.astro-vscode"; };
       "editor.inlineSuggest.enabled" = true;
+      "editor.minimap.enabled" = false;
+      "workbench.startupEditor" = "none";
     };
   };
 }
