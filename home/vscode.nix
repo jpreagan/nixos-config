@@ -53,10 +53,11 @@
       "editor.fontFamily" = "'JetBrains Mono', monospace";
       "workbench.colorTheme" = "Tokyo Night";
       "window.zoomLevel" = 1;
-      "prettier.documentSelectors" = ["**/*.astro"];
+      "prettier.documentSelectors" = [ "**/*.astro" ];
       "[astro]" = { "editor.defaultFormatter" = "astro-build.astro-vscode"; };
       "editor.inlineSuggest.enabled" = true;
       "editor.minimap.enabled" = false;
+      "editor.formatOnSave" = true;
       "workbench.startupEditor" = "none";
     };
   };
