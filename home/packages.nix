@@ -34,6 +34,9 @@
     # Lua
     stylua
 
+    # Go
+    gopls
+
     # Node
     nodejs
     nodePackages.yarn
