@@ -38,6 +38,7 @@
 
     # Go
     gopls
+    go-tools
 
     # Node
     nodejs
