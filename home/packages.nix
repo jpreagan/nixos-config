@@ -53,9 +53,11 @@
     php82Packages.composer
 
     # Python
-    python39
-    python39Packages.pip
-    python39Packages.pynvim
+    (python311.withPackages (ps: [
+      ps.pip
+      ps.pynvim
+      ps.requests
+    ]))
 
     # Rust
     rustup
