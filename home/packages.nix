@@ -19,6 +19,8 @@
     pandoc
     pscale
     pwgen
+    sqlc
+    sqlfluff
     tldr
     tree
     nodePackages.vercel
