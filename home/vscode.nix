@@ -11,7 +11,6 @@
         denoland.vscode-deno
         eamodio.gitlens
         esbenp.prettier-vscode
-        github.copilot
         github.vscode-pull-request-github
         github.github-vscode-theme
         golang.go
@@ -49,6 +48,12 @@
           publisher = "unifiedjs";
           version = "1.2.2";
           sha256 = "EYjyjnwWrdr95CTwgbBmooJB/Tu8QUHDUyIDS72xNa0=";
+        }
+        {
+          name = "copilot-nightly";
+          publisher = "github";
+          version = "1.78.10605";
+          sha256 = "RgEnN0G4xiv/61p/R/fUNa+jOpt6J++/ZywJGg4el4c=";
         }
       ];
     userSettings = {
