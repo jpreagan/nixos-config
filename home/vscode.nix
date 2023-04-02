@@ -9,8 +9,10 @@
         bradlc.vscode-tailwindcss
         dbaeumer.vscode-eslint
         denoland.vscode-deno
+        eamodio.gitlens
         esbenp.prettier-vscode
         github.copilot
+        github.vscode-pull-request-github
         github.github-vscode-theme
         golang.go
         graphql.vscode-graphql
