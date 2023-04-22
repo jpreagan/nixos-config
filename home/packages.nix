@@ -57,6 +57,7 @@
       ps.pip
       ps.pynvim
       ps.requests
+      ps.virtualenv
     ]))
 
     # Rust
