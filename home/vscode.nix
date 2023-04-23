@@ -16,6 +16,8 @@
         golang.go
         graphql.vscode-graphql
         ms-azuretools.vscode-docker
+        ms-python.vscode-pylance
+        ms-python.python
         prisma.prisma
         vscodevim.vim
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
@@ -61,11 +63,21 @@
       "workbench.colorTheme" = "Tokyo Night";
       "window.zoomLevel" = 1;
       "prettier.documentSelectors" = [ "**/*.astro" ];
-      "[astro]" = { "editor.defaultFormatter" = "astro-build.astro-vscode"; };
       "editor.inlineSuggest.enabled" = true;
       "editor.minimap.enabled" = false;
       "editor.formatOnSave" = true;
       "workbench.startupEditor" = "none";
+      "[astro]" = { "editor.defaultFormatter" = "astro-build.astro-vscode"; };
+      "[python]" = {
+        "editor.defaultFormatter" = "ms-python.python";
+        "editor.formatOnType" = true;
+      };
+      "[typescript]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
+      "[typescriptreact]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+      };
     };
   };
 }
