@@ -25,6 +25,7 @@
     tree
     nodePackages.vercel
     ripgrep
+    wget
 
     # C/C++
     gcc
