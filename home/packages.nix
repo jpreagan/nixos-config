@@ -54,7 +54,7 @@
 
     # Python
     (python311.withPackages
-      (ps: [ ps.pip ps.pynvim ps.requests ps.virtualenv ]))
+      (ps: [ ps.black ps.pip ps.pynvim ps.requests ps.virtualenv ]))
 
     # Rust
     rustup
