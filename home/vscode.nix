@@ -18,6 +18,7 @@
         ms-azuretools.vscode-docker
         ms-python.vscode-pylance
         ms-python.python
+        ms-toolsai.jupyter
         prisma.prisma
         vscodevim.vim
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [

@@ -54,8 +54,14 @@
     php82Packages.composer
 
     # Python
-    (python311.withPackages
-      (ps: [ ps.black ps.pip ps.pynvim ps.requests ps.virtualenv ]))
+    (python311.withPackages (ps: [
+      ps.black
+      ps.jupyterlab
+      ps.pip
+      ps.pynvim
+      ps.requests
+      ps.virtualenv
+    ]))
 
     # Rust
     rustup
