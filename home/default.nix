@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ ./zsh.nix ./kitty.nix ./git.nix ./nvim.nix ./vscode.nix ./packages.nix ];
+    [ ./zsh.nix ./kitty.nix ./git.nix ./nvim.nix ./packages.nix ];
 
   home.username = "james";
   home.homeDirectory = "/Users/james";
