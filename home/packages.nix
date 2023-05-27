@@ -62,6 +62,7 @@
       ps.requests
       ps.virtualenv
     ]))
+    pipenv
 
     # Rust
     rustup
