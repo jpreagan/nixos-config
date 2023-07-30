@@ -31,6 +31,9 @@
     gcc
     gnumake
 
+    # Java
+    jdk20
+
     # Nix
     nixfmt
 
