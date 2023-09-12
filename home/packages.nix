@@ -11,8 +11,10 @@
     fd
     flyctl
     gh
+    github-copilot-cli
     google-cloud-sdk
     htop
+    imagemagick
     mkcert
     neofetch
     nss
@@ -26,6 +28,7 @@
     nodePackages.vercel
     ripgrep
     wget
+    zola
 
     # C/C++
     gcc
@@ -44,26 +47,25 @@
     gopls
     go-tools
 
-    # Node
+    # JavaScript
+    bun
+    deno
     nodejs
     nodePackages.yarn
     nodePackages.pnpm
-
-    # Deno
-    deno
 
     # PHP
     php82
     php82Packages.composer
 
     # Python
-    (python311.withPackages (ps: [
-      ps.black
-      ps.jupyterlab
-      ps.pip
-      ps.pynvim
-      ps.requests
-      ps.virtualenv
+    (python311.withPackages (ps: with ps; [
+      black
+      #jupyterlab
+      pip
+      pynvim
+      requests
+      virtualenv
     ]))
     pipenv
 
