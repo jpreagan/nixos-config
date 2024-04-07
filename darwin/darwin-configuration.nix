@@ -28,8 +28,9 @@
       autoUpdate = true;
       cleanup = "zap";
     };
-    taps = [ "homebrew/cask" ];
-    casks = [ "rectangle" ];
+    casks = [
+      "rectangle"
+    ];
   };
 
   services.skhd = {
