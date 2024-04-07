@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  programs.kitty = {
+  programs.kitty = if pkgs.stdenv.isDarwin then { } else {
     enable = true;
     font = {
       name = "JetBrainsMono Nerd Font Mono";
@@ -12,7 +12,6 @@
       background_opacity = "0.97";
       disable_ligatures = "always";
       macos_titlebar_color = "dark";
-      macos_quit_when_last_window_closed = pkgs.stdenv.isDarwin;
     };
   };
 }
