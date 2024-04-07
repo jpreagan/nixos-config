@@ -229,10 +229,6 @@
       "keyCode" : 125,
       "modifierFlags" : 786432
     },
-    "bottomHalf" : {
-      "keyCode" : 125,
-      "modifierFlags" : 786432
-    },
     "bottomLeft" : {
       "keyCode" : 38,
       "modifierFlags" : 786432
@@ -307,10 +303,6 @@
     },
     "toggleTodo" : {
       "keyCode" : 11,
-      "modifierFlags" : 786432
-    },
-    "topHalf" : {
-      "keyCode" : 126,
       "modifierFlags" : 786432
     },
     "topLeft" : {
