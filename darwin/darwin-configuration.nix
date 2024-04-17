@@ -36,7 +36,7 @@
   services.skhd = {
     enable = true;
     skhdConfig = ''
-      ctrl + cmd - return : kitty --single-instance --directory ~
+      ctrl + cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance --directory ~
     '';
   };
 
