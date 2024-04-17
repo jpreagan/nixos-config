@@ -32,8 +32,7 @@
       path=($HOME/bin
             $HOME/.local/bin
             $HOME/.cargo/bin
-            $HOME/.npm-global/bin
-            $HOME/.config/composer/vendor/bin
+            $HOME/Library/Python/3.12/bin
             /opt/local/bin
             $path)
     '';
