@@ -3,42 +3,44 @@
 {
   programs.zsh = {
     enable = true;
-    dotDir = ".config/zsh";
-    history.path = "$ZDOTDIR/.zsh_history";
-    prezto = {
-      enable = true;
-      editor.keymap = "vi";
-      pmodules = [
-        "environment"
-        "terminal"
-        "editor"
-        "history"
-        "directory"
-        "spectrum"
-        "utility"
-        "completion"
-        "syntax-highlighting"
-        "history-substring-search"
-        "autosuggestions"
-        "prompt"
-      ];
-      prompt.theme = "pure";
+    autocd = true;
+    autosuggestion.enable = true;
+    defaultKeymap = "viins";
+    dirHashes = {
+      dl = "$HOME/Downloads";
+      src = "$HOME/Downloads";
     };
+    dotDir = ".config/zsh";
+    envExtra = ''
+      export PATH="$HOME/.local/share/google-cloud-sdk/bin:$PATH"
+      export PATH="$HOME/.local/bin:$PATH"
+    '';
+    history = {
+      ignoreAllDups = true;
+      ignorePatterns = [ "* --help" "cd" "clear" "date" "exit" "history" "ls" "pwd" "rm *" "rmdir *" ];
+      path = "$ZDOTDIR/.zsh_history";
+    };
+    historySubstringSearch.enable = true;
     initExtra = ''
+      autoload -U promptinit; promptinit
+      prompt pure
       PURE_PROMPT_SYMBOL='▶'
       PURE_PROMPT_VICMD_SYMBOL='◀'
-      source ~/.local/share/google-cloud-sdk/completion.zsh.inc
+
+      if [ -f "$HOME/.local/share/google-cloud-sdk/completion.zsh.inc" ]; then
+        source "$HOME/.local/share/google-cloud-sdk/completion.zsh.inc"
+      fi
     '';
-    profileExtra = ''
-      path=($HOME/bin
-            $HOME/.local/bin
-            $HOME/.local/share/google-cloud-sdk/bin
-            $HOME/.cargo/bin
-            $HOME/Library/Python/3.12/bin
-            /Library/Frameworks/Python.framework/Versions/3.12/bin
-            /opt/local/bin
-            $path)
-    '';
+    shellAliases = {
+      ls = "ls --color=auto";
+    };
+    syntaxHighlighting.enable = true;
+    zsh-abbr = {
+      enable = true;
+      abbreviations = {
+        gco = "git checkout";
+      };
+    };
   };
 }
 
