@@ -22,16 +22,9 @@
     promptInit = "autoload -U promptinit && promptinit && prompt off";
   };
 
-  homebrew = {
-    enable = true;
-    onActivation = {
-      autoUpdate = true;
-      cleanup = "zap";
-    };
-    casks = [
-      "rectangle"
-    ];
-  };
+  environment.systemPackages = with pkgs; [
+    rectangle
+  ];
 
   services.skhd = {
     enable = true;
