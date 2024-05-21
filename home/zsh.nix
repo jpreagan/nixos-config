@@ -28,6 +28,8 @@
       if [ -f "$HOME/.local/share/google-cloud-sdk/completion.zsh.inc" ]; then
         source "$HOME/.local/share/google-cloud-sdk/completion.zsh.inc"
       fi
+
+      bindkey '^[[Z' autosuggest-accept
     '';
     shellAliases = {
       ls = "ls --color=auto";
